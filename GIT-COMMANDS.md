@@ -3,8 +3,8 @@
 ## بعد إنشاء Repository على GitHub، نفذ هذه الأوامر:
 
 ```bash
-# استبدل USERNAME باسم مستخدم GitHub الخاص بك
-git remote add origin https://github.com/USERNAME/aqua-control-website.git
+# ربط المشروع المحلي بـ GitHub
+git remote add origin https://github.com/ahmedmordy123/aqua-control-website.git
 
 # رفع الملفات إلى GitHub
 git branch -M main
@@ -27,7 +27,7 @@ git remote add origin https://github.com/aquacontrol123/aqua-control-website.git
 
 ## الرابط النهائي:
 بعد التفعيل، الموقع سيكون متاح على:
-`https://USERNAME.github.io/aqua-control-website/`
+`https://ahmedmordy123.github.io/aqua-control-website/`
 
 ---
 
