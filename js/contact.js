@@ -168,27 +168,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Send WhatsApp message with form data
     function sendWhatsAppMessage(data) {
         const phoneNumber = '201016809096';
-        let message = `طلب خدمة جديد من الموقع:\n\n`;
-        message += `الاسم: ${data.name}\n`;
-        message += `الهاتف: ${data.phone}\n`;
-        message += `المحافظة: ${data.governorate}\n`;
-        message += `نوع المكان: ${data['property-type']}\n`;
+        let message = `🌟 طلب خدمة جديد من موقع أكوا كنترول 🌟\n\n`;
+        message += `👤 الاسم: ${data.name}\n`;
+        message += `📞 الهاتف: ${data.phone}\n`;
+        message += `📍 المحافظة: ${data.governorate}\n`;
+        message += `🏠 نوع المكان: ${data['property-type']}\n`;
         
         if (data['service-type']) {
-            message += `الخدمات المطلوبة: ${data['service-type'].join(', ')}\n`;
+            message += `🛠️ الخدمات المطلوبة: ${data['service-type'].join(', ')}\n`;
         }
         
         if (data.urgency) {
-            message += `الأولوية: ${data.urgency}\n`;
+            message += `⚡ الأولوية: ${data.urgency}\n`;
         }
         
         if (data['preferred-time']) {
-            message += `الوقت المفضل: ${data['preferred-time']}\n`;
+            message += `🕐 الوقت المفضل: ${data['preferred-time']}\n`;
         }
         
         if (data.message) {
-            message += `تفاصيل إضافية: ${data.message}\n`;
+            message += `📝 تفاصيل إضافية: ${data.message}\n`;
         }
+        
+        message += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+        message += `🌐 تم الإرسال من: موقع أكوا كنترول\n`;
+        message += `📱 للتواصل السريع: +20 10 16809096`;
         
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         
